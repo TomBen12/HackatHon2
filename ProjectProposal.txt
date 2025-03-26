@@ -1,0 +1,25 @@
+Project Proposal: Chatto
+
+Description
+
+Chatto is a simple, topic-based chat application where users enter a topic (e.g., “music”, “coding”, “anime”) and are matched into a chat room with others who chose the same topic.
+Users can send and receive messages in real time or using short polling. No authentication is required—users are assigned anonymous usernames.
+
+⸻
+
+Tech Stack
+	•	Backend: Node.js + Express
+	•	Frontend: HTML, CSS, JavaScript (Vanilla)
+	•	Routing: RESTful API via Express
+	•	Data Storage: JSON files (chat messages per topic)
+		(Optional: switch to a database like SQLite/PostgreSQL if time allows)
+	•	Static File Serving: Express will serve all frontend assets
+
+⸻
+
+Optional Features (If Time Permits)
+	•	Real-time chat using WebSocket (Socket.IO)
+	•	Anonymous username generation (e.g., “Anonymous42”)
+	•	Drawing board per topic using HTML5 Canvas
+	•	Topic discovery (recent or popular topics)
+	•	Message timestamps

@@ -1,0 +1,114 @@
+/* Base */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #050505, #0d0d0d);
+  color: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2rem;
+  color: #0ff; /* neon cyan */
+  text-shadow: 0 0 2px #0ff; /* subtle glow */
+}
+
+/* Chat container */
+#chatBox {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 20px;
+  margin: 30px 0;
+  height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+/* Chat message style */
+#chatBox div {
+  margin-bottom: 12px;
+  padding: 6px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+#chatBox strong {
+  color: #0ff;
+  text-shadow: none; /* clean sharp text */
+  font-weight: bold;
+}
+
+#chatBox small {
+  color: #888;
+  font-size: 0.75rem;
+  margin-left: 10px;
+}
+
+/* Form */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px auto;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  width: 250px;
+  background-color: rgba(20, 20, 20, 0.9);
+  color: #0ff;
+  text-shadow: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+input[type="text"]::placeholder {
+  color: #555;
+}
+
+/* Buttons */
+button,
+.topic-button {
+  padding: 10px 20px;
+  background-color: rgba(10, 10, 10, 0.95);
+  color: #0ff;
+  font-weight: bold;
+  text-shadow: none;
+  border: 1px solid #0ff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    text-shadow 0.2s ease;
+}
+
+button:hover,
+.topic-button:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+  transform: scale(1.05);
+  text-shadow: 0 0 6px #0ff; /* glow only on hover */
+}
+
+/* Topic buttons container */
+#topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}

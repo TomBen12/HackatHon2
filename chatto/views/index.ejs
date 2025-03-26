@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatto - Topic Chat</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Welcome to Chatto</h1>
+
+    <form id="create-room-form">
+      <input
+        type="text"
+        id="topicInput"
+        placeholder="Enter a topic..."
+        required
+      />
+      <button type="submit">Create / Join</button>
+    </form>
+
+    <h2>Recent Topics</h2>
+    <div id="topics">
+      <% recentTopics.forEach(topic => { %>
+      <form action="/chat/<%= topic %>">
+        <button class="topic-button" data-topic="<%= topic %>">
+          <%= topic %>
+        </button>
+      </form>
+      <% }); %>
+    </div>
+    <script src="/js/home.js"></script>
+  </body>
+</html>
