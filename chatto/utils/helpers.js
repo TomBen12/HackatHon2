@@ -23,7 +23,7 @@ export function getRandomUsername() {
 }
 
 export function getColorFromUsername(username) {
-  if (!username) return "hsl(0, 0%, 100%)"; 
+  if (!username) return "hsl(0, 0%, 100%)";
   let hash = 0;
   for (let i = 0; i < username.length; i++) {
     hash = username.charCodeAt(i) + ((hash << 5) - hash);

@@ -1,4 +1,3 @@
-// models/messageModel.js
 import { getColorFromUsername } from "../utils/helpers.js";
 import fs from "fs/promises";
 import path from "path";
@@ -12,12 +11,8 @@ export async function saveMessage(topic, message) {
   try {
     let data = {};
 
-    try {
-      const content = await fs.readFile(dataPath, "utf-8");
-      data = JSON.parse(content);
-    } catch {
-      // File may not exist or be empty, can ignore
-    }
+    const content = await fs.readFile(dataPath, "utf-8");
+    data = JSON.parse(content);
 
     if (!data[topic]) {
       data[topic] = [];

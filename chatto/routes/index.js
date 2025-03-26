@@ -4,7 +4,7 @@ import { renderHome, joinChatRoom } from "../controllers/chatController.js";
 
 const router = Router();
 
-router.get("/", renderHome); // homepage
-router.get("/chat/:topic", joinChatRoom); // chat room by topic
+router.get("/", renderHome);
+router.get("/chat/:topic", joinChatRoom);
 
 export default router;

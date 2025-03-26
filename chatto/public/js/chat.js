@@ -26,15 +26,3 @@ socket.on("message", (data) => {
   ).toLocaleTimeString()}</small>`;
   chatBox.appendChild(el);
 });
-
-// socket.on("loadMessages", (messages) => {
-//   messages.forEach((data) => {
-//     const el = document.createElement("div");
-//     el.innerHTML = `<strong style="color: ${data.color}">${
-//       data.username
-//     }</strong>: ${data.message} <small>${new Date(
-//       data.timestamp
-//     ).toLocaleTimeString()}</small>`;
-//     chatBox.appendChild(el);
-//   });
-// });

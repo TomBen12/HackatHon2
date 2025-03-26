@@ -12,7 +12,6 @@ export function setupSocket(io) {
       socket.join(topic);
       socket.username = getRandomUsername();
       socket.topic = topic;
-
       try {
         const pastMessages = await getMessagesByTopic(topic);
         socket.emit("loadMessages", pastMessages);

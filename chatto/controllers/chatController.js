@@ -1,11 +1,7 @@
-// controllers/chatController.js
-import path from "path";
-import { fileURLToPath } from "url";
+
 import { getRecentTopics } from "../utils/helpers.js";
 import { getMessagesByTopic } from "../models/messageModel.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export async function renderHome(req, res) {
   try {
